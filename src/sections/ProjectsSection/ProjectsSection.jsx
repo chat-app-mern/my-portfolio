@@ -13,7 +13,7 @@ const ProjectsSection = () => {
             title: 'Freshly',
             tech: 'Next.js',
             image: '/images/freshly-image.png',
-            link: 'https://github.com/maurya22010/blog-app',
+            link: 'https://github.com/maurya22010/recipe-app',
         },
         {
             title: 'Leave App',
