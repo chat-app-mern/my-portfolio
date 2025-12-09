@@ -28,7 +28,7 @@ const AboutMyNpmPackage = () => {
         {
             image: '/images/remove-marker.png',
             name: 'Remove Markers',
-            description: 'One‑click marker delete for instant cut adjustment.',
+            description: 'One-click marker delete for instant cuts.',
         },
         {
             image: '/images/delete-trim-video.png',
