@@ -48,10 +48,10 @@ const Header = () => {
     useEffect(() => {
         const handleScroll = () => {
             if (pathname !== '/') return;
-            
+
             const sections = ['banner', 'about', 'projects'];
             let found = false;
-            
+
             for (const sectionId of sections) {
                 const element = document.getElementById(sectionId);
                 if (element) {
@@ -63,7 +63,7 @@ const Header = () => {
                     }
                 }
             }
-            
+
             if (!found) {
                 setActiveSection('');
             }
