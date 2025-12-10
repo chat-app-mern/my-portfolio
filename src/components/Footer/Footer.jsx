@@ -94,7 +94,7 @@ const Footer = () => {
                         <div className="flex flex-wrap gap-5">
                             <Link
                                 href={links.linkedin}
-                                className="h-10 w-10 border border-grey rounded-full inline-flex items-center justify-center p-2 cursor-pointer"
+                                className="h-10 w-10 border border-grey hover:border-primary transition-all ease-in-out duration-300 rounded-full inline-flex items-center justify-center p-2 cursor-pointer"
                                 target="_blank"
                                 aria-label="LinkedIn profile"
                             >
@@ -109,7 +109,7 @@ const Footer = () => {
                             <Link
                                 href={links.mail}
                                 aria-label="Email contact"
-                                className="h-10 w-10 border border-grey rounded-full inline-flex items-center justify-center p-2 cursor-pointer"
+                                className="h-10 w-10 border border-grey hover:border-primary transition-all ease-in-out duration-300 rounded-full inline-flex items-center justify-center p-2 cursor-pointer"
                             >
                                 <Image
                                     height={18}
@@ -121,7 +121,7 @@ const Footer = () => {
                             </Link>
                             <Link
                                 href={links.instagram}
-                                className="h-10 w-10 border border-grey rounded-full inline-flex items-center justify-center p-2 cursor-pointer"
+                                className="h-10 w-10 border border-grey hover:border-primary transition-all ease-in-out duration-300 rounded-full inline-flex items-center justify-center p-2 cursor-pointer"
                                 target="_blank"
                                 aria-label="Instagram profile"
                             >
@@ -135,7 +135,7 @@ const Footer = () => {
                             </Link>
                             <Link
                                 href={links.credly}
-                                className="h-10 w-10 border border-grey rounded-full inline-flex items-center justify-center p-1.5 cursor-pointer"
+                                className="h-10 w-10 border border-grey hover:border-primary transition-all ease-in-out duration-300 rounded-full inline-flex items-center justify-center p-2 cursor-pointer"
                                 target="_blank"
                                 aria-label="Credly profile"
                             >

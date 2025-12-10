@@ -26,7 +26,7 @@ const AboutSection = () => {
                 </div>
                 <div className="w-full lg:w-6/12 px-4">
                     <div>
-                        <p className="text-grey text-xl font-semibold pb-5">
+                        <p className="text-grey text-lg md:text-xl font-semibold pb-5 text-center md:text-left">
                             A Frontend Developer with {experience} years of
                             experience, skilled in creating clean, responsive,
                             and user-friendly web interfaces. I work confidently
@@ -41,7 +41,7 @@ const AboutSection = () => {
                             problem-solving, and delivering polished digital
                             experiences.
                         </p>
-                        <div>
+                        <div className="text-center md:text-left">
                             <Link
                                 href={'/about-my-npm-package'}
                                 className="btn outline"

@@ -3,7 +3,7 @@ import Image from 'next/image';
 const SkillCard = ({ image, name, description }) => {
     return (
         <div className="w-full md:w-6/12 lg:w-4/12 px-4">
-            <div className="bg-lightBlack p-8 rounded-3xl h-full flex flex-col justify-center items-center">
+            <div className="bg-lightBlack p-8 rounded-3xl h-full flex flex-col justify-center items-center transition-shadow hover:shadow-[0_0_30px_rgba(255,60,60,0.4)]">
                 <div className="grid place-items-center">
                     <Image
                         src={image}

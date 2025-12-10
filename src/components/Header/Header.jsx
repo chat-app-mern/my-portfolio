@@ -1,11 +1,14 @@
 'use client';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
+import { usePathname } from 'next/navigation';
 import { useState, useEffect, useRef } from 'react';
 
 const Header = () => {
     const router = useRouter();
+    const pathname = usePathname();
     const [mobileOpen, setMobileOpen] = useState(false);
+    const [activeSection, setActiveSection] = useState('banner');
     const menuRef = useRef(null);
 
     useEffect(() => {
@@ -13,12 +16,12 @@ const Header = () => {
     }, [mobileOpen]);
 
     useEffect(() => {
-        const handleResize = () => {
-            if (window.innerWidth >= 768) setMobileOpen(false);
-        };
-        window.addEventListener('resize', handleResize);
-        return () => window.removeEventListener('resize', handleResize);
-    }, []);
+        if (pathname === '/contact-me') {
+            setActiveSection('contact');
+        } else if (pathname === '/') {
+            setActiveSection('banner');
+        }
+    }, [pathname]);
     const scrollToSection = (sectionId) => {
         const scrollAction = () => {
             const element = document.getElementById(sectionId);
@@ -41,6 +44,34 @@ const Header = () => {
         }
         setMobileOpen(false);
     };
+
+    useEffect(() => {
+        const handleScroll = () => {
+            if (pathname !== '/') return;
+            
+            const sections = ['banner', 'about', 'projects'];
+            let found = false;
+            
+            for (const sectionId of sections) {
+                const element = document.getElementById(sectionId);
+                if (element) {
+                    const rect = element.getBoundingClientRect();
+                    if (rect.top <= 100 && rect.bottom > 100) {
+                        setActiveSection(sectionId);
+                        found = true;
+                        break;
+                    }
+                }
+            }
+            
+            if (!found) {
+                setActiveSection('');
+            }
+        };
+
+        window.addEventListener('scroll', handleScroll);
+        return () => window.removeEventListener('scroll', handleScroll);
+    }, [pathname]);
 
     return (
         <div className="relative z-20 h-[68px]">
@@ -106,7 +137,11 @@ const Header = () => {
                                         onClick={() =>
                                             scrollToSection('banner')
                                         }
-                                        className="text-xl font-medium text-grey hover:text-primary transition"
+                                        className={`text-xl font-medium transition ${
+                                            activeSection === 'banner'
+                                                ? 'text-primary'
+                                                : 'text-grey hover:text-primary'
+                                        }`}
                                     >
                                         Home
                                     </button>
@@ -114,7 +149,11 @@ const Header = () => {
                                 <li>
                                     <button
                                         onClick={() => scrollToSection('about')}
-                                        className="text-xl font-medium text-grey hover:text-primary transition"
+                                        className={`text-xl font-medium transition ${
+                                            activeSection === 'about'
+                                                ? 'text-primary'
+                                                : 'text-grey hover:text-primary'
+                                        }`}
                                     >
                                         About
                                     </button>
@@ -124,7 +163,11 @@ const Header = () => {
                                         onClick={() =>
                                             scrollToSection('projects')
                                         }
-                                        className="text-xl font-medium text-grey hover:text-primary transition"
+                                        className={`text-xl font-medium transition ${
+                                            activeSection === 'projects'
+                                                ? 'text-primary'
+                                                : 'text-grey hover:text-primary'
+                                        }`}
                                     >
                                         Projects
                                     </button>
@@ -132,7 +175,11 @@ const Header = () => {
                                 <li>
                                     <Link
                                         href="/contact-me"
-                                        className="text-xl font-medium text-grey hover:text-primary transition"
+                                        className={`text-xl font-medium transition ${
+                                            pathname === '/contact-me'
+                                                ? 'text-primary'
+                                                : 'text-grey hover:text-primary'
+                                        }`}
                                     >
                                         Contact
                                     </Link>
@@ -192,7 +239,11 @@ const Header = () => {
                                                 onClick={() =>
                                                     scrollToSection('banner')
                                                 }
-                                                className="text-xl font-medium text-grey hover:text-primary transition"
+                                                className={`text-xl font-medium transition ${
+                                                    activeSection === 'banner'
+                                                        ? 'text-primary'
+                                                        : 'text-grey hover:text-primary'
+                                                }`}
                                             >
                                                 Home
                                             </button>
@@ -202,7 +253,11 @@ const Header = () => {
                                                 onClick={() =>
                                                     scrollToSection('about')
                                                 }
-                                                className="text-xl font-medium text-grey hover:text-primary transition"
+                                                className={`text-xl font-medium transition ${
+                                                    activeSection === 'about'
+                                                        ? 'text-primary'
+                                                        : 'text-grey hover:text-primary'
+                                                }`}
                                             >
                                                 About
                                             </button>
@@ -212,7 +267,11 @@ const Header = () => {
                                                 onClick={() =>
                                                     scrollToSection('projects')
                                                 }
-                                                className="text-xl font-medium text-grey hover:text-primary transition"
+                                                className={`text-xl font-medium transition ${
+                                                    activeSection === 'projects'
+                                                        ? 'text-primary'
+                                                        : 'text-grey hover:text-primary'
+                                                }`}
                                             >
                                                 Projects
                                             </button>
@@ -220,7 +279,11 @@ const Header = () => {
                                         <li>
                                             <Link
                                                 href="/contact-me"
-                                                className="text-xl font-medium text-grey hover:text-primary transition"
+                                                className={`text-xl font-medium transition ${
+                                                    pathname === '/contact-me'
+                                                        ? 'text-primary'
+                                                        : 'text-grey hover:text-primary'
+                                                }`}
                                                 onClick={() =>
                                                     setMobileOpen(false)
                                                 }

@@ -7,7 +7,7 @@ const ProjectCard = ({ project }) => {
             <Link
                 target="_blank"
                 href={project.link}
-                className="flex flex-col h-full"
+                className="flex flex-col h-full group transition-shadow hover:shadow-[0_0_30px_rgba(255,60,60,0.4)] rounded-xl"
             >
                 <div className="pb-[100%] relative">
                     <Image
@@ -19,7 +19,7 @@ const ProjectCard = ({ project }) => {
                 </div>
 
                 <div className="flex justify-between items-center gap-2.5 p-4 bg-lightBlack rounded-b-xl h-full">
-                    <h3 className="text-grey font-bold text-base">
+                    <h3 className="text-grey font-bold text-base group-hover:text-primary transition ease-in-out duration-300">
                         {project.title}
                     </h3>
                     <h4 className="text-darkGrey font-bold text-base">

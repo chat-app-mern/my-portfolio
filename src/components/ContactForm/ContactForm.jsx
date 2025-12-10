@@ -161,7 +161,7 @@ const ContactForm = () => {
                 <div className="w-full">
                     <input
                         type="text"
-                        placeholder="Name"
+                        placeholder="Name*"
                         className={`form-control ${
                             errors.name
                                 ? 'border-red-500 focus:border-red-500'
@@ -180,7 +180,7 @@ const ContactForm = () => {
                 <div className="w-full">
                     <input
                         type="email"
-                        placeholder="Email"
+                        placeholder="Email*"
                         className={`form-control ${
                             errors.email
                                 ? 'border-red-500 focus:border-red-500'
@@ -199,7 +199,7 @@ const ContactForm = () => {
                 <div className="w-full">
                     <input
                         type="text"
-                        placeholder="Subject"
+                        placeholder="Subject*"
                         className={`form-control ${
                             errors.subject
                                 ? 'border-red-500 focus:border-red-500'
@@ -222,7 +222,7 @@ const ContactForm = () => {
                                 ? 'border-red-500 focus:border-red-500'
                                 : ''
                         }`}
-                        placeholder="Message (minimum 20 characters)"
+                        placeholder="Message*"
                         rows="5"
                         {...register('message')}
                         disabled={isSubmitting}

@@ -28,7 +28,7 @@ const TimelineSection = () => {
     ];
     return (
         <CommonSectionWrapper
-            title="Timeline"
+            title="My Journey"
             description={`What I've Done Upto This Point.`}
             sectionId="timeline"
         >

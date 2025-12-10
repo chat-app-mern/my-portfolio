@@ -31,13 +31,14 @@ const CommonHead = ({ metaData }) => {
             />
             <meta charSet="UTF-8" />
 
+            <link rel="icon" href="/favicon.ico" />
+
             <meta property="og:title" content={ogTitle} />
             <meta property="og:description" content={ogDescription} />
             <meta property="og:image" content={ogImage} />
             <meta property="og:type" content="website" />
 
             <link rel="canonical" href={canonicalUrl} />
-
             <script
                 defer
                 type="application/ld+json"
@@ -53,4 +54,5 @@ const CommonHead = ({ metaData }) => {
         </Head>
     );
 };
+
 export default CommonHead;

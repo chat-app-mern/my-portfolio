@@ -26,7 +26,7 @@ const BannerSection = () => {
                                         href={links.linkedin}
                                         aria-label="linkedin-profile-link"
                                         target="_blank"
-                                        className="h-10 w-10 border border-grey rounded-full inline-flex items-center justify-center p-2 cursor-pointer"
+                                        className="h-10 w-10 border border-grey hover:border-primary transition-all ease-in-out duration-300 rounded-full inline-flex items-center justify-center p-2 cursor-pointer"
                                     >
                                         <Image
                                             height={18}
@@ -39,7 +39,7 @@ const BannerSection = () => {
                                     <Link
                                         href={links.mail}
                                         aria-label="mail-profile-link"
-                                        className="h-10 w-10 border border-grey rounded-full inline-flex items-center justify-center p-2 cursor-pointer"
+                                        className="h-10 w-10 border border-grey hover:border-primary transition-all ease-in-out duration-300 rounded-full inline-flex items-center justify-center p-2 cursor-pointer"
                                     >
                                         <Image
                                             height={18}
@@ -53,7 +53,7 @@ const BannerSection = () => {
                                         href={links.instagram}
                                         target="_blank"
                                         aria-label="instagram-profile-link"
-                                        className="h-10 w-10 border border-grey rounded-full inline-flex items-center justify-center p-2 cursor-pointer"
+                                        className="h-10 w-10 border border-grey hover:border-primary transition-all ease-in-out duration-300 rounded-full inline-flex items-center justify-center p-2 cursor-pointer"
                                     >
                                         <Image
                                             height={18}
@@ -67,7 +67,7 @@ const BannerSection = () => {
                                         href={links.credly}
                                         target="_blank"
                                         aria-label="credly-profile-link"
-                                        className="h-10 w-10 border border-grey rounded-full inline-flex items-center justify-center p-1.5 cursor-pointer"
+                                        className="h-10 w-10 border border-grey hover:border-primary transition-all ease-in-out duration-300 rounded-full inline-flex items-center justify-center p-2 cursor-pointer"
                                     >
                                         <Image
                                             height={18}
@@ -79,13 +79,12 @@ const BannerSection = () => {
                                     </Link>
                                 </div>
                                 <div className="text-center md:text-left py-6 md:py-10">
-                                    <a
-                                        href={links.downloadCV}
-                                        download
+                                    <Link
+                                        href={'/contact-me'}
                                         className="btn outline"
                                     >
-                                        Download CV
-                                    </a>
+                                        Contact Me
+                                    </Link>
                                 </div>
                                 <div className="block md:inline-block">
                                     <div className="bg-lightBlack p-6 rounded-lg w-full">
