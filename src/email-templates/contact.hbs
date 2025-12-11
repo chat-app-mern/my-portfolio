@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>New Contact Form Submission</title>
+<style type="text/css">
+    body {
+        margin: 0; 
+        padding: 0; 
+        font-family: Arial, sans-serif; 
+        background-color: #f4f4f4; 
+        color: #333;
+    }
+    table {
+        border-collapse: collapse;
+    }
+    @media only screen and (max-width: 600px) {
+        table[class="container"] {
+            width: 95% !important;
+        }
+        td[class="header"] {
+            font-size: 20px !important;
+            padding: 15px !important;
+        }
+        td[class="content"] {
+            padding: 15px !important;
+            font-size: 16px !important;
+            line-height: 22px !important;
+        }
+    }
+</style>
+</head>
+<body>
+<!-- Top spacing -->
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bgcolor="#f4f4f4">
+    <tr><td height="30"></td></tr>
+</table>
+
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bgcolor="#f4f4f4">
+    <tr>
+        <td align="center">
+            <!-- Container -->
+            <table class="container" width="600" cellpadding="0" cellspacing="0" border="0" bgcolor="#ffffff" style="border:1px solid #dddddd;">
+                <!-- Header -->
+                <tr>
+                    <td class="header" bgcolor="#121212" style="padding:20px; text-align:center; color:#ffffff; font-size:22px; font-weight:bold;">
+                        New Contact Form Submission
+                    </td>
+                </tr>
+                <!-- Content -->
+                <tr>
+                    <td class="content" style="padding:25px; font-size:14px; line-height:20px; color:#333;">
+                        <p><strong>Name:</strong> {{name}}</p>
+                        <p><strong>Email:</strong> <a href="mailto:{{email}}" style="color:#FF3C3C; text-decoration:none;">{{email}}</a></p>
+                        <p><strong>Subject:</strong> {{subject}}</p>
+                        <p><strong>Message:</strong></p>
+                        <p style="background-color:#f9f9f9; padding:10px; border-left:4px solid #FF3C3C;">{{message}}</p>
+                    </td>
+                </tr>
+            </table>
+            <!-- End Container -->
+        </td>
+    </tr>
+</table>
+
+<!-- Bottom spacing -->
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bgcolor="#f4f4f4">
+    <tr><td height="30"></td></tr>
+</table>
+</body>
+</html>

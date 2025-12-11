@@ -41,108 +41,72 @@ const ContactForm = () => {
         try {
             const token = await executeRecaptcha('contact_form');
 
+            // Create FormData with all fields
+            const formData = new FormData();
+            formData.append('name', data.name);
+            formData.append('email', data.email);
+            formData.append('subject', data.subject);
+            formData.append('message', data.message);
+            formData.append('token', token);
+
+            // First, verify reCAPTCHA using FormData
             const verifyResponse = await fetch('/api/verify-recaptcha', {
                 method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify({ token }),
+                body: formData,
             });
 
             const verifyResult = await verifyResponse.json();
 
             if (!verifyResult.success) {
-                if (
-                    verifyResult.errors &&
-                    typeof verifyResult.errors === 'object'
-                ) {
-                    Object.keys(verifyResult.errors).forEach((field) => {
-                        const fieldName = field.toLowerCase();
-                        const errorMessage = Array.isArray(
-                            verifyResult.errors[field],
-                        )
-                            ? verifyResult.errors[field][0]
-                            : verifyResult.errors[field];
-
-                        if (
-                            ['name', 'email', 'subject', 'message'].includes(
-                                fieldName,
-                            )
-                        ) {
-                            setError(fieldName, {
-                                type: 'server',
-                                message: errorMessage,
-                            });
-                        }
-                    });
-                }
                 toast.error(
                     verifyResult.message ||
-                        'Verification failed. Please try again.',
+                        'reCAPTCHA verification failed. Please try again.',
                 );
                 setIsSubmitting(false);
                 return;
             }
 
-            const formDataToSend = new FormData();
-            formDataToSend.append(
-                'access_key',
-                process.env.NEXT_PUBLIC_FORM_KEY,
-            );
-            formDataToSend.append('name', data.name);
-            formDataToSend.append('email', data.email);
-            formDataToSend.append('subject', data.subject);
-            formDataToSend.append(
-                'message',
-                `Subject: ${data.subject}\n\n${data.message}`,
-            );
-            formDataToSend.append('from_name', data.name);
+            // If reCAPTCHA succeeds, call the contact API with the same FormData
+            const response = await fetch('/api/contact', {
+                method: 'POST',
+                body: formData,
+            });
 
-            const web3Response = await fetch(
-                'https://api.web3forms.com/submit',
-                {
-                    method: 'POST',
-                    body: formDataToSend,
-                },
-            );
+            const result = await response.json();
 
-            const result = await web3Response.json();
-
-            if (result.success) {
+            if (response.ok && result.success) {
                 toast.success(result.message || 'Message sent successfully!');
                 reset();
                 setTimeout(() => {
                     router.push('/thank-you');
                 }, 1000);
-            } else {
-                if (result.errors && typeof result.errors === 'object') {
-                    Object.keys(result.errors).forEach((field) => {
-                        const fieldName = field.toLowerCase();
-                        const errorMessage = Array.isArray(result.errors[field])
-                            ? result.errors[field][0]
-                            : result.errors[field];
-
-                        if (
-                            ['name', 'email', 'subject', 'message'].includes(
-                                fieldName,
-                            )
-                        ) {
-                            setError(fieldName, {
-                                type: 'server',
-                                message: errorMessage,
-                            });
-                        }
-                    });
-                    toast.error(
-                        result.message || 'Please check the form for errors',
-                    );
-                } else {
-                    toast.error(
-                        result.message ||
-                            'Failed to send message. Please try again.',
-                    );
-                }
+                return;
             }
+
+            // Handle field-specific errors from backend
+            if (result.errors && typeof result.errors === 'object') {
+                Object.keys(result.errors).forEach((field) => {
+                    const fieldName = field.toLowerCase();
+                    const errorMessage = Array.isArray(result.errors[field])
+                        ? result.errors[field][0]
+                        : result.errors[field];
+
+                    if (
+                        ['name', 'email', 'subject', 'message'].includes(
+                            fieldName,
+                        )
+                    ) {
+                        setError(fieldName, {
+                            type: 'server',
+                            message: errorMessage,
+                        });
+                    }
+                });
+            }
+
+            toast.error(
+                result.message || 'Failed to send message. Please try again.',
+            );
         } catch (error) {
             toast.error(
                 'Unable to send your message. Please check your connection and try again.',

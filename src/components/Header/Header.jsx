@@ -8,7 +8,7 @@ const Header = () => {
     const router = useRouter();
     const pathname = usePathname();
     const [mobileOpen, setMobileOpen] = useState(false);
-    const [activeSection, setActiveSection] = useState('banner');
+    const [activeSection, setActiveSection] = useState('');
     const menuRef = useRef(null);
 
     useEffect(() => {
