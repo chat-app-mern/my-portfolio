@@ -1,5 +1,7 @@
 import MainLayout from 'components/layouts/MainLayout/MainLayout';
 import dynamic from 'next/dynamic';
+import { SpeedInsights } from '@vercel/speed-insights/next';
+import { Analytics } from '@vercel/analytics/react';
 import '../styles/font.css';
 import '../styles/globals.css';
 import 'aos/dist/aos.css';
@@ -25,7 +27,10 @@ function MyApp({ Component, pageProps }) {
                 <Component {...pageProps} />
                 <ToastProvider />
             </MainLayout>
+            <SpeedInsights />
+            <Analytics />
         </AosWrapper>
     );
 }
+
 export default MyApp;
