@@ -9,7 +9,11 @@ const BannerSection = () => {
         <section className="section-padding-bottom" id="banner">
             <div className="container">
                 <div className="flex flex-wrap -mx-4 items-center gap-7 lg:gap-0">
-                    <div className="w-full lg:w-6/12 px-4">
+                    <div
+                        className="w-full lg:w-6/12 px-4"
+                        data-aos="fade-right"
+                        data-aos-delay="400"
+                    >
                         <div className="pt-10 lg:py-14">
                             <p className="text-grey text-center md:text-left text-xl md:text-2xl font-semibold pb-2.5">
                                 Hi I am
@@ -99,7 +103,11 @@ const BannerSection = () => {
                             </div>
                         </div>
                     </div>
-                    <div className="w-full lg:w-6/12 px-4">
+                    <div
+                        className="w-full lg:w-6/12 px-4"
+                        data-aos="fade-left"
+                        data-aos-delay="400"
+                    >
                         <div className="lg:py-5">
                             <div className="pb-[85%] relative">
                                 <Image

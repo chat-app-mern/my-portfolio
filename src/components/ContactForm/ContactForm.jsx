@@ -117,7 +117,11 @@ const ContactForm = () => {
     };
 
     return (
-        <div className="w-full max-w-[500px] mx-auto">
+        <div
+            className="w-full max-w-[500px] mx-auto"
+            data-aos="fade-up"
+            data-aos-delay="400"
+        >
             <form
                 onSubmit={handleSubmit(onSubmit)}
                 className="flex flex-col gap-7 flex-wrap"

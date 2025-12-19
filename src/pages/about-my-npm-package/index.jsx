@@ -56,10 +56,18 @@ const AboutMyNpmPackage = () => {
             <CommonHead metaData={metaPackage} />
             <article className="py-14 md:py-20">
                 <div className="container sm">
-                    <h1 className="text-primary text-center text-5xl md:text-7xl font-black">
+                    <h1
+                        data-aos="fade-up"
+                        data-aos-delay="300"
+                        className="text-primary text-center text-5xl md:text-7xl font-black"
+                    >
                         Video Trimmer
                     </h1>
-                    <div className="text-center pt-8 pb-14">
+                    <div
+                        data-aos="fade-up"
+                        data-aos-delay="300"
+                        className="text-center pt-8 pb-14"
+                    >
                         <Link
                             target="_blank"
                             href={'https://www.npmjs.com/package/video-trimmer'}
@@ -68,7 +76,11 @@ const AboutMyNpmPackage = () => {
                             View Now
                         </Link>
                     </div>
-                    <div className="pb-10 md:pb-20">
+                    <div
+                        data-aos="fade-up"
+                        data-aos-delay="400"
+                        className="pb-10 md:pb-20"
+                    >
                         <Image
                             src={'/images/videotrimmer-image.png'}
                             alt="video-trimmer-image"
@@ -79,11 +91,17 @@ const AboutMyNpmPackage = () => {
                     </div>
                     <section className="section-padding">
                         <h2
+                            data-aos="fade-up"
+                            data-aos-delay="300"
                             className={`text-center text-white text-4xl font-bold`}
                         >
                             Package Overview
                         </h2>
-                        <p className="text-center text-grey pt-4 text-xl font-medium">
+                        <p
+                            data-aos="fade-up"
+                            data-aos-delay="400"
+                            className="text-center text-grey pt-4 text-xl font-medium"
+                        >
                             VideoTrimmer is a lightweight and easy-to-use tool
                             that makes video editing simple. With it, you can
                             upload your videos, add trim markers, preview
@@ -93,7 +111,11 @@ const AboutMyNpmPackage = () => {
                             editing experience without needing any extra
                             software.
                         </p>
-                        <p className="text-center text-grey pt-4 text-xl font-medium">
+                        <p
+                            data-aos="fade-up"
+                            data-aos-delay="400"
+                            className="text-center text-grey pt-4 text-xl font-medium"
+                        >
                             Editing videos shouldn’t be complicated.
                             VideoTrimmer lets you drag and drop videos, set
                             exact start and end points using trim markers,
@@ -102,7 +124,11 @@ const AboutMyNpmPackage = () => {
                             clips, making sure your final video is exactly how
                             you want it.
                         </p>
-                        <p className="text-center text-grey pt-4 text-xl font-medium">
+                        <p
+                            data-aos="fade-up"
+                            data-aos-delay="400"
+                            className="text-center text-grey pt-4 text-xl font-medium"
+                        >
                             VideoTrimmer is packed with handy features: return
                             to edit your clips, preview segments before cutting,
                             download trimmed videos instantly, and manage

@@ -11,6 +11,8 @@ const TimelineCard = ({ title, description, index }) => {
                 className={`w-full xl:max-w-[500px] 2xl:max-w-[580px] bg-lightBlack rounded-3xl p-8 transition-shadow hover:shadow-[0_0_30px_rgba(255,60,60,0.4)] ${
                     isOdd ? 'mr-auto' : 'ml-auto'
                 }`}
+                data-aos={isOdd ? 'fade-right' : 'fade-left'}
+                data-aos-delay="400"
             >
                 <h3 className="text-xl md:text-2xl text-center md:text-left font-bold text-primary pb-8">
                     {title}

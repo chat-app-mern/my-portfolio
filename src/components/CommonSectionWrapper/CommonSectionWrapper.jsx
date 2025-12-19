@@ -4,6 +4,8 @@ const CommonSectionWrapper = ({ title, description, children, sectionId }) => {
             <div className="container">
                 {title && (
                     <h2
+                        data-aos="fade-up"
+                        data-aos-delay="300"
                         className={`text-center text-white text-4xl font-bold ${
                             !description ? 'pb-10' : ''
                         }`}
@@ -12,7 +14,11 @@ const CommonSectionWrapper = ({ title, description, children, sectionId }) => {
                     </h2>
                 )}
                 {description && (
-                    <p className="text-center text-grey pt-4 pb-10 text-xl font-medium">
+                    <p
+                        data-aos="fade-up"
+                        data-aos-delay="300"
+                        className="text-center text-grey pt-4 pb-10 text-xl font-medium"
+                    >
                         {description}
                     </p>
                 )}

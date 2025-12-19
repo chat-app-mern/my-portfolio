@@ -31,7 +31,21 @@ const CommonHead = ({ metaData }) => {
             />
             <meta charSet="UTF-8" />
 
-            <link rel="icon" href="/favicon.ico" />
+            <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+            <link
+                rel="icon"
+                type="image/png"
+                sizes="32x32"
+                href="/favicon.ico"
+            />
+            <link
+                rel="icon"
+                type="image/png"
+                sizes="16x16"
+                href="/favicon.ico"
+            />
+            <link rel="apple-touch-icon" href="/favicon.ico" />
+            <link rel="shortcut icon" href="/favicon.ico" />
 
             <meta property="og:title" content={ogTitle} />
             <meta property="og:description" content={ogDescription} />

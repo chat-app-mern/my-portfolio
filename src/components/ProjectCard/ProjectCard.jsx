@@ -3,7 +3,11 @@ import Link from 'next/link';
 
 const ProjectCard = ({ project }) => {
     return (
-        <div className="px-4 w-full md:w-6/12 lg:w-4/12">
+        <div
+            className="px-4 w-full md:w-6/12 lg:w-4/12"
+            data-aos="fade-up"
+            data-aos-delay="400"
+        >
             <Link
                 target="_blank"
                 href={project.link}

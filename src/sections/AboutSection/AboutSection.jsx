@@ -12,7 +12,11 @@ const AboutSection = () => {
             sectionId="about"
         >
             <div className="flex flex-wrap -mx-4 items-center gap-7 lg:gap-0">
-                <div className="w-full lg:w-6/12 px-4">
+                <div
+                    className="w-full lg:w-6/12 px-4"
+                    data-aos="fade-right"
+                    data-aos-delay="400"
+                >
                     <div className="">
                         <div className="pb-[85%] relative">
                             <Image
@@ -24,7 +28,11 @@ const AboutSection = () => {
                         </div>
                     </div>
                 </div>
-                <div className="w-full lg:w-6/12 px-4">
+                <div
+                    className="w-full lg:w-6/12 px-4"
+                    data-aos="fade-left"
+                    data-aos-delay="400"
+                >
                     <div>
                         <p className="text-grey text-lg md:text-xl font-semibold pb-5 text-center md:text-left">
                             A Frontend Developer with {experience} years of
