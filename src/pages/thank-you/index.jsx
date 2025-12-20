@@ -28,3 +28,10 @@ const ThankYouPage = () => {
     );
 };
 export default ThankYouPage;
+
+export async function getStaticProps() {
+    return {
+        props: {},
+        revalidate: 3600,
+    };
+}

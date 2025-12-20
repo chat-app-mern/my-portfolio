@@ -219,7 +219,23 @@ const ContactForm = () => {
                         }`}
                         disabled={isSubmitting}
                     >
-                        {isSubmitting ? 'SUBMITTING...' : 'SUBMIT'}
+                        {isSubmitting ? (
+                            <span className="wave-text">
+                                <span>S</span>
+                                <span>U</span>
+                                <span>B</span>
+                                <span>M</span>
+                                <span>I</span>
+                                <span>T</span>
+                                <span>T</span>
+                                <span>I</span>
+                                <span>N</span>
+                                <span>G</span>
+                                <span>.</span>
+                            </span>
+                        ) : (
+                            'SUBMIT'
+                        )}
                     </button>
                 </div>
             </form>

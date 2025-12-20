@@ -160,3 +160,10 @@ const AboutMyNpmPackage = () => {
 };
 
 export default AboutMyNpmPackage;
+
+export async function getStaticProps() {
+    return {
+        props: {},
+        revalidate: 3600,
+    };
+}

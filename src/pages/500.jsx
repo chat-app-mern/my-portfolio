@@ -26,3 +26,10 @@ const SomethingWentWrongPage = () => {
     );
 };
 export default SomethingWentWrongPage;
+
+export async function getStaticProps() {
+    return {
+        props: {},
+        revalidate: 3600,
+    };
+}

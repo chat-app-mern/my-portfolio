@@ -29,3 +29,10 @@ const NotFound = () => {
     );
 };
 export default NotFound;
+
+export async function getStaticProps() {
+    return {
+        props: {},
+        revalidate: 3600,
+    };
+}

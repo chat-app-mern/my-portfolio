@@ -4,10 +4,12 @@ import 'aos/dist/aos.css';
 
 const AosWrapper = ({ children }) => {
     useEffect(() => {
-        AOS.init({
-            duration: 1000,
-            once: true,
-        });
+        if (typeof window !== 'undefined') {
+            AOS.init({
+                duration: 1000,
+                once: true,
+            });
+        }
     }, []);
 
     return <>{children}</>;

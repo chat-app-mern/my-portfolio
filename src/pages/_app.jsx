@@ -9,27 +9,27 @@ import 'aos/dist/aos.css';
 const AosWrapper = dynamic(
     () => import('components/wrappers/AosWrapper/AosWrapper'),
     {
-        ssr: false,
+        ssr: true,
     },
 );
 
 const ToastProvider = dynamic(
     () => import('components/wrappers/ToastWrapper/ToastWrapper'),
     {
-        ssr: false,
+        ssr: true,
     },
 );
 
 function MyApp({ Component, pageProps }) {
     return (
-        <AosWrapper>
-            <MainLayout>
+        <MainLayout>
+            <AosWrapper>
                 <Component {...pageProps} />
                 <ToastProvider />
-            </MainLayout>
+            </AosWrapper>
             <SpeedInsights />
             <Analytics />
-        </AosWrapper>
+        </MainLayout>
     );
 }
 
