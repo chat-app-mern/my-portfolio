@@ -15,7 +15,7 @@ const AboutMyNpmPackage = () => {
             title: 'VideoTrimmer – NPM Package',
             description:
                 'A lightweight and easy-to-use browser-based video trimming package built with ffmpeg.wasm.',
-            image: '/images/video-trimmer-banner.webp',
+            image: '/images/videotrimmer-image.png',
         },
     };
     const features = [
