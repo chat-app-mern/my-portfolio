@@ -13,7 +13,7 @@ const ContactMePage = () => {
             title: 'Contact Us',
             description:
                 'Have questions or need support? Reach out through our contact form.',
-            image: '/images/maurya-image-one.webp',
+            image: '/images/maurya-main-image.jpg',
         },
     };
 

@@ -11,7 +11,7 @@ const SomethingWentWrongPage = () => {
             title: '500 - Internal Server Error',
             description:
                 'An unexpected error occurred on the server. We are working to fix it as soon as possible.',
-            image: '/images/maurya-image-one.webp',
+            image: '/images/maurya-main-image.jpg',
         },
     };
 

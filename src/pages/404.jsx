@@ -11,7 +11,7 @@ const NotFound = () => {
             title: '404 - Page Not Found',
             description:
                 "Oops! The page you're looking for cannot be found. Visit our homepage to continue browsing.",
-            image: '/images/maurya-image-one.webp',
+            image: '/images/maurya-main-image.jpg',
         },
     };
 

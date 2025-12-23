@@ -11,7 +11,7 @@ const ThankYouPage = () => {
             title: 'Thank You',
             description:
                 'We appreciate you contacting us! We will reach out to you soon.',
-            image: '/images/maurya-image-one.webp',
+            image: '/images/maurya-main-image.jpg',
         },
     };
     return (
