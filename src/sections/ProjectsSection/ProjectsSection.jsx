@@ -4,12 +4,6 @@ import ProjectCard from 'components/components/ProjectCard/ProjectCard';
 const ProjectsSection = () => {
     const projectsData = [
         {
-            title: 'Video Trimmer',
-            tech: 'NPM Package',
-            image: '/images/videotrimmer-image.png',
-            link: 'https://github.com/maurya22010/video-trimmer',
-        },
-        {
             title: 'Freshly',
             tech: 'Next.js',
             image: '/images/freshly-image.png',
@@ -26,18 +20,6 @@ const ProjectsSection = () => {
             tech: 'Mern Stack',
             image: '/images/foodmart-image.png',
             link: 'https://github.com/maurya22010/foodmart-frontend',
-        },
-        {
-            title: 'Positivus UI',
-            tech: 'Next.js, Tailwind CSS',
-            image: '/images/positivus-image.png',
-            link: 'https://github.com/maurya22010/positivus-ui',
-        },
-        {
-            title: 'Blogify',
-            tech: 'Node.js, EJS',
-            image: '/images/blogify-image.png',
-            link: 'https://github.com/maurya22010/blog-app',
         },
     ];
 
