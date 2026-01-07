@@ -49,14 +49,6 @@ const AboutSection = () => {
                             problem-solving, and delivering polished digital
                             experiences.
                         </p>
-                        <div className="text-center md:text-left">
-                            <Link
-                                href={'/about-my-npm-package'}
-                                className="btn outline"
-                            >
-                                About My NPM Package
-                            </Link>
-                        </div>
                     </div>
                 </div>
             </div>
