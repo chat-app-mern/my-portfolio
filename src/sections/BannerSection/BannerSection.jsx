@@ -111,9 +111,9 @@ const BannerSection = () => {
                         <div className="lg:py-5">
                             <div className="pb-[85%] relative">
                                 <Image
-                                    src={'/images/maurya-main-image.jpg'}
+                                    src={'/images/maurya-image-one.jpg'}
                                     alt="main-image"
-                                    className="object-cover rounded-lg bg-primary"
+                                    className="object-cover object-center rounded-lg bg-primary"
                                     fill
                                 />
                             </div>

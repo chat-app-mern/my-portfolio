@@ -20,9 +20,9 @@ const AboutSection = () => {
                     <div className="">
                         <div className="pb-[85%] relative">
                             <Image
-                                src={'/images/maurya-image-two.webp'}
+                                src={'/images/maurya-image-two.jpg'}
                                 alt="main-image"
-                                className="object-cover rounded-lg bg-primary"
+                                className="object-cover object-center rounded-lg bg-primary"
                                 fill
                             />
                         </div>
