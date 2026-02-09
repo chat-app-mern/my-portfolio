@@ -124,4 +124,5 @@ const BannerSection = () => {
         </section>
     );
 };
+
 export default BannerSection;
