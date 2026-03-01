@@ -42,12 +42,7 @@ const AboutSection = () => {
                             to build modern and smooth frontends. With hands-on
                             knowledge of Node.js, MongoDB, and Sequelize, I
                             understand full-stack workflows and build features
-                            that connect perfectly from UI to backend. I also
-                            developed and published an npm package,
-                            VideoTrimmer, a lightweight tool for trimming videos
-                            directly in the browser. I focus on clean design,
-                            problem-solving, and delivering polished digital
-                            experiences.
+                            that connect perfectly from UI to backend.
                         </p>
                     </div>
                 </div>
