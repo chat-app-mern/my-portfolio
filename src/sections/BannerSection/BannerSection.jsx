@@ -115,6 +115,7 @@ const BannerSection = () => {
                                     alt="main-image"
                                     className="object-cover object-center rounded-lg bg-primary"
                                     fill
+                                    priority
                                 />
                             </div>
                         </div>

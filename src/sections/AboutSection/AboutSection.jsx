@@ -1,7 +1,6 @@
 import CommonSectionWrapper from 'components/components/CommonSectionWrapper/CommonSectionWrapper';
 import calculateExperience from 'components/utils/calculateExperience';
 import Image from 'next/image';
-import Link from 'next/link';
 
 const AboutSection = () => {
     const experience = calculateExperience('2024-05-06');

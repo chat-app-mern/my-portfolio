@@ -9,23 +9,28 @@ const TimelineSection = () => {
             id: 1,
             title: 'Krishaweb',
             description: `Frontend Developer (${experience} years)`,
+            url: 'https://www.krishaweb.com'
         },
         {
             id: 2,
             title: 'Charusat University',
             description: 'Btech-IT (2020 - 2024)',
+            url: 'https://www.charusat.ac.in'
         },
         {
             id: 3,
             title: 'Nirman High School, Vastrapur',
             description: 'HSC (2018 - 2020)',
+            url: 'https://nirmanhighschool.com'
         },
         {
             id: 4,
             title: 'St. Kabir School, Drive-In (Old)',
             description: 'SSC (2006 - 2018)',
+            url: 'https://stkabir.com'
         },
     ];
+
     return (
         <CommonSectionWrapper
             title="My Journey"
@@ -40,10 +45,12 @@ const TimelineSection = () => {
                         title={item.title}
                         description={item.description}
                         index={index}
+                        url={item.url}
                     />
                 ))}
             </div>
         </CommonSectionWrapper>
     );
 };
+
 export default TimelineSection;
