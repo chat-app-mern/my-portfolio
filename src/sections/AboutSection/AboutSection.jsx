@@ -1,9 +1,14 @@
+import { useEffect, useState } from 'react';
 import CommonSectionWrapper from 'components/components/CommonSectionWrapper/CommonSectionWrapper';
 import calculateExperience from 'components/utils/calculateExperience';
 import Image from 'next/image';
 
 const AboutSection = () => {
-    const experience = calculateExperience('2024-05-06');
+    const [experience, setExperience] = useState('1+');
+
+    useEffect(() => {
+        setExperience(calculateExperience('2024-05-06'));
+    }, []);
     return (
         <CommonSectionWrapper
             description="Frontend Development — creating clean and interactive web experiences."

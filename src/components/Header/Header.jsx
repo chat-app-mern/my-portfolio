@@ -1,12 +1,13 @@
 'use client';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
-import { usePathname } from 'next/navigation';
 import { useState, useEffect, useRef } from 'react';
+import GoogleTranslate from '../GoogleTranslate/GoogleTranslate';
+import LanguageSwitcher from '../LanguageSwitcher/LanguageSwitcher';
 
 const Header = () => {
     const router = useRouter();
-    const pathname = usePathname();
+    const pathname = router.pathname;
     const [mobileOpen, setMobileOpen] = useState(false);
     const [activeSection, setActiveSection] = useState('');
     const menuRef = useRef(null);
@@ -84,6 +85,12 @@ const Header = () => {
                         >
                             MS
                         </Link>
+
+                            {/* Google translate script loader */}
+                            <GoogleTranslate />
+                        {/* Language Switcher & Mobile Menu */}
+                        <div className="flex items-center gap-4 md:gap-8">
+                        <LanguageSwitcher />
                         <button
                             onClick={() => setMobileOpen(true)}
                             className="md:hidden text-grey"
@@ -186,6 +193,7 @@ const Header = () => {
                                 </li>
                             </ul>
                         </nav>
+                        </div>
                         {mobileOpen && (
                             <div
                                 ref={menuRef}

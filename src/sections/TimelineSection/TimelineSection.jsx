@@ -1,9 +1,14 @@
+import { useEffect, useState } from 'react';
 import CommonSectionWrapper from 'components/components/CommonSectionWrapper/CommonSectionWrapper';
 import TimelineCard from 'components/components/TimelineCard/TimelineCard';
 import calculateExperience from 'components/utils/calculateExperience';
 
 const TimelineSection = () => {
-    const experience = calculateExperience('2024-05-06');
+    const [experience, setExperience] = useState('1+');
+
+    useEffect(() => {
+        setExperience(calculateExperience('2024-05-06'));
+    }, []);
     const timelineData = [
         {
             id: 1,

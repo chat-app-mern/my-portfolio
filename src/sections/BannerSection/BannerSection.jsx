@@ -1,10 +1,15 @@
+import { useEffect, useState } from 'react';
 import calculateExperience from 'components/utils/calculateExperience';
 import links from 'components/utils/links';
 import Image from 'next/image';
 import Link from 'next/link';
 
 const BannerSection = () => {
-    const experience = calculateExperience('2024-05-06');
+    const [experience, setExperience] = useState('1+');
+
+    useEffect(() => {
+        setExperience(calculateExperience('2024-05-06'));
+    }, []);
     return (
         <section className="section-padding-bottom" id="banner">
             <div className="container">

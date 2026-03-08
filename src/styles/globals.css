@@ -169,22 +169,27 @@ textarea:-webkit-autofill:focus {
     @apply pb-10 lg:pb-20 overflow-hidden;
 }
 .section-padding-top {
-    @apply pb-10 lg:pt-20 overflow-hidden;
+    @apply pt-10 lg:pt-20 overflow-hidden;
 }
 .btn {
-    @apply inline-flex gap-2.5 items-center justify-center border-2 py-3 px-7 capitalize cursor-pointer text-xl font-bold rounded-lg duration-300 ease-in-out transition-all;
+    @apply inline-flex gap-2.5 items-center justify-center border-2 py-3 px-7 capitalize cursor-pointer text-xl font-bold rounded-lg duration-300 ease-in-out transition-all focus:outline-none focus-visible:ring-2 focus-visible:ring-primary/40 focus-visible:ring-offset-2 focus-visible:ring-offset-black;
 }
 .btn.primary {
-    @apply bg-primary text-white border-primary hover:border-grey hover:text-grey hover:bg-black;
+    @apply bg-primary text-white border-primary hover:border-grey hover:text-grey hover:bg-black focus-visible:border-primary;
 }
 .btn.outline {
-    @apply border-grey text-grey bg-black hover:bg-primary hover:text-white hover:border-primary;
+    @apply border-grey text-grey bg-black hover:bg-primary hover:text-white hover:border-primary focus-visible:border-primary;
 }
 .form-control {
-    @apply w-full px-5 py-3 h-[54px] bg-lightBlack text-grey placeholder:text-darkGrey text-base placeholder:text-base font-medium placeholder:font-medium rounded-lg;
+    @apply w-full px-5 py-3 h-[54px] bg-lightBlack text-grey placeholder:text-darkGrey text-base placeholder:text-base font-medium placeholder:font-medium rounded-lg border-2 border-grey transition-all duration-200 focus:border-primary focus:ring-2 focus:ring-primary/30 focus:outline-none;
 }
 .form-control.text-area {
     @apply h-[120px] overflow-y-auto;
+}
+
+/* Contact form: stronger tab/focus effect on inputs */
+.form-control:focus-visible {
+    @apply border-primary ring-2 ring-primary/30 outline-none;
 }
 
 /* Wave animation for submitting text */
@@ -251,11 +256,46 @@ textarea:-webkit-autofill:focus {
     animation-delay: 1s;
 }
 
-/*media*/
 @media (max-width: 1280px) {
     [data-aos] {
         opacity: 1 !important;
         transform: none !important;
         transition: none !important;
     }
+}
+/* Google Translate Overrides */
+body > .skiptranslate {
+    display: none !important;
+}
+
+.goog-te-banner-frame.skiptranslate,
+#goog-gt-tt,
+.goog-te-balloon-frame {
+    display: none !important;
+}
+
+.goog-logo-link {
+    display: none !important;
+}
+
+.goog-te-gadget {
+    color: transparent !important;
+    font-size: 0px !important;
+}
+
+.goog-te-gadget img {
+    display: none !important;
+}
+
+.goog-text-highlight {
+    background: none !important;
+    box-shadow: none !important;
+}
+
+body {
+    top: 0px !important;
+}
+
+html, body {
+    position: static !important;
 }
