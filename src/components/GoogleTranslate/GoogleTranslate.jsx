@@ -13,7 +13,6 @@ export default function GoogleTranslate() {
         {
           pageLanguage: "en",
           autoDisplay: false,
-          includedLanguages: "en,hi,gu,mr",
         },
         "google_translate_element"
       );
