@@ -2,8 +2,6 @@
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { useState, useEffect, useRef } from 'react';
-import GoogleTranslate from '../GoogleTranslate/GoogleTranslate';
-import LanguageSwitcher from '../LanguageSwitcher/LanguageSwitcher';
 
 const Header = () => {
     const router = useRouter();
@@ -86,11 +84,8 @@ const Header = () => {
                             MS
                         </Link>
 
-                            {/* Google translate script loader */}
-                            <GoogleTranslate />
-                        {/* Language Switcher & Mobile Menu */}
+                        {/* Mobile Menu */}
                         <div className="flex items-center gap-4 md:gap-8">
-                        <LanguageSwitcher />
                         <button
                             onClick={() => setMobileOpen(true)}
                             className="md:hidden text-grey"

@@ -12,7 +12,6 @@ const nextConfig = {
         NEXT_PORTFOLIO_WEBSITE_URL: process.env.NEXT_PORTFOLIO_WEBSITE_URL,
         MAILER_EMAIL: process.env.MAILER_EMAIL,
         MAILER_PASSCODE: process.env.MAILER_PASSCODE,
-        MONGODB_URI: process.env.MONGODB_URI,
     },
 
     images: {

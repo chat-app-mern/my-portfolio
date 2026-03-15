@@ -3,7 +3,6 @@ import Busboy from 'busboy';
 import fs from 'fs';
 import path from 'path';
 import { contactFormServerSchema } from 'components/validations/contactForm.validation';
-import { connectToDatabase } from 'components/utils/mongodb';
 import mailer from 'components/utils/mailer';
 
 async function parseFormData(req) {
@@ -64,8 +63,6 @@ export default async function handler(req, res) {
 
         const validatedData = validationResult.data;
 
-        const { db } = await connectToDatabase();
-        const contacts = db.collection('contacts');
         const doc = {
             name: validatedData.name.trim(),
             email: validatedData.email.trim(),
@@ -73,8 +70,6 @@ export default async function handler(req, res) {
             message: validatedData.message.trim(),
             createdAt: new Date(),
         };
-
-        await contacts.insertOne(doc);
 
         // -----------------------------
         // Send emails BEFORE responding
