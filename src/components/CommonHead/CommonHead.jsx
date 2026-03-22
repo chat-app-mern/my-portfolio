@@ -49,6 +49,7 @@ const CommonHead = ({ metaData, pageType }) => {
                 {
                     '@type': 'EducationalOrganization',
                     name: 'Charusat University',
+                    url: 'https://www.charusat.ac.in',
                 },
             ],
             address: {
@@ -56,6 +57,19 @@ const CommonHead = ({ metaData, pageType }) => {
                 addressLocality: 'Ahmedabad',
                 addressCountry: 'IN',
             },
+            hasCredential: [
+                {
+                    '@type': 'EducationalOccupationalCredential',
+                    name: 'Verified Certifications',
+                    credentialCategory: 'certificate',
+                    recognizedBy: {
+                        '@type': 'Organization',
+                        name: 'Credly',
+                        url: 'https://www.credly.com',
+                    },
+                    url: 'https://www.credly.com/users/mauryasoni/badges',
+                },
+            ],
             knowsAbout: [
                 'React',
                 'Next.js',
@@ -63,6 +77,9 @@ const CommonHead = ({ metaData, pageType }) => {
                 'Tailwind CSS',
                 'Node.js',
                 'MongoDB',
+                'HTML',
+                'CSS',
+                'SCSS',
             ],
             sameAs: [
                 'https://www.linkedin.com/in/mauryasoni',
@@ -72,6 +89,50 @@ const CommonHead = ({ metaData, pageType }) => {
             ],
         },
     };
+
+    const projectsSchema = [
+        {
+            '@context': 'https://schema.org',
+            '@type': 'SoftwareSourceCode',
+            name: 'Freshly — Recipe App',
+            description:
+                'A recipe discovery app built with Next.js. Users can browse, search, and save recipes with SSG for fast load times and strong SEO.',
+            programmingLanguage: ['JavaScript', 'Next.js', 'React'],
+            codeRepository: 'https://github.com/maurya22010/recipe-app',
+            author: { '@id': `${BASE_URL}/#person` },
+        },
+        {
+            '@context': 'https://schema.org',
+            '@type': 'SoftwareSourceCode',
+            name: 'Leave App — Leave Management System',
+            description:
+                'A leave management system built on the MERN Stack with role-based access control for employees and managers.',
+            programmingLanguage: [
+                'JavaScript',
+                'React',
+                'Node.js',
+                'MongoDB',
+            ],
+            codeRepository:
+                'https://github.com/maurya22010/leave-mgmt-frontend',
+            author: { '@id': `${BASE_URL}/#person` },
+        },
+        {
+            '@context': 'https://schema.org',
+            '@type': 'SoftwareSourceCode',
+            name: 'FoodMart — Food Delivery Platform',
+            description:
+                'A food delivery platform built on the MERN Stack with product listings, cart management, and a full checkout flow.',
+            programmingLanguage: [
+                'JavaScript',
+                'React',
+                'Node.js',
+                'MongoDB',
+            ],
+            codeRepository: 'https://github.com/maurya22010/foodmart-frontend',
+            author: { '@id': `${BASE_URL}/#person` },
+        },
+    ];
 
     const contactPageSchema = {
         '@context': 'https://schema.org',
@@ -153,6 +214,18 @@ const CommonHead = ({ metaData, pageType }) => {
                     }}
                 />
             )}
+
+            {/* SoftwareSourceCode schema for each project — homepage only */}
+            {isHomePage &&
+                projectsSchema.map((schema, i) => (
+                    <script
+                        key={i}
+                        type="application/ld+json"
+                        dangerouslySetInnerHTML={{
+                            __html: JSON.stringify(schema),
+                        }}
+                    />
+                ))}
 
             {/* ContactPage schema */}
             {isContactPage && (

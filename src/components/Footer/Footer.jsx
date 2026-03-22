@@ -6,22 +6,9 @@ import { useRouter } from 'next/router';
 const Footer = () => {
     const router = useRouter();
 
-    const scrollToSection = (sectionId) => {
-        if (router.pathname !== '/') {
-            router.push('/').then(() => {
-                setTimeout(() => {
-                    const element = document.getElementById(sectionId);
-                    if (element) {
-                        const yOffset = -68;
-                        const y =
-                            element.getBoundingClientRect().top +
-                            window.pageYOffset +
-                            yOffset;
-                        window.scrollTo({ top: y, behavior: 'smooth' });
-                    }
-                }, 500);
-            });
-        } else {
+    const scrollToSection = (e, sectionId) => {
+        if (router.pathname === '/') {
+            e.preventDefault();
             const element = document.getElementById(sectionId);
             if (element) {
                 const yOffset = -68;
@@ -51,34 +38,37 @@ const Footer = () => {
                             <nav>
                                 <ul className="flex gap-8 md:gap-14 flex-wrap md:items-center flex-col md:flex-row">
                                     <li>
-                                        <button
-                                            onClick={() =>
-                                                scrollToSection('banner')
+                                        <a
+                                            href="/#banner"
+                                            onClick={(e) =>
+                                                scrollToSection(e, 'banner')
                                             }
                                             className="text-xl font-medium text-grey transition-all duration-300 ease-in-out hover:text-primary cursor-pointer"
                                         >
                                             Home
-                                        </button>
+                                        </a>
                                     </li>
                                     <li>
-                                        <button
-                                            onClick={() =>
-                                                scrollToSection('about')
+                                        <a
+                                            href="/#about"
+                                            onClick={(e) =>
+                                                scrollToSection(e, 'about')
                                             }
                                             className="text-xl font-medium text-grey transition-all duration-300 ease-in-out hover:text-primary cursor-pointer"
                                         >
                                             About
-                                        </button>
+                                        </a>
                                     </li>
                                     <li>
-                                        <button
-                                            onClick={() =>
-                                                scrollToSection('projects')
+                                        <a
+                                            href="/#projects"
+                                            onClick={(e) =>
+                                                scrollToSection(e, 'projects')
                                             }
                                             className="text-xl font-medium text-grey transition-all duration-300 ease-in-out hover:text-primary cursor-pointer"
                                         >
                                             Projects
-                                        </button>
+                                        </a>
                                     </li>
                                     <li>
                                         <Link
@@ -88,13 +78,21 @@ const Footer = () => {
                                             Contact
                                         </Link>
                                     </li>
+                                    <li>
+                                        <Link
+                                            className="text-xl font-medium text-grey transition-all duration-300 ease-in-out hover:text-primary"
+                                            href="/privacy-policy"
+                                        >
+                                            Privacy Policy
+                                        </Link>
+                                    </li>
                                 </ul>
                             </nav>
                         </div>
                         <div className="flex flex-wrap gap-5">
                             <Link
                                 href={links.linkedin}
-                                className="h-10 w-10 border border-grey hover:border-primary transition-all ease-in-out duration-300 rounded-full inline-flex items-center justify-center p-2 cursor-pointer"
+                                className="h-12 w-12 border border-grey hover:border-primary transition-all ease-in-out duration-300 rounded-full inline-flex items-center justify-center p-2 cursor-pointer"
                                 target="_blank"
                                 aria-label="Maurya Soni on LinkedIn"
                             >
@@ -108,7 +106,7 @@ const Footer = () => {
                             </Link>
                             <Link
                                 href={links.github}
-                                className="h-10 w-10 border border-grey hover:border-primary transition-all ease-in-out duration-300 rounded-full inline-flex items-center justify-center p-2 cursor-pointer"
+                                className="h-12 w-12 border border-grey hover:border-primary transition-all ease-in-out duration-300 rounded-full inline-flex items-center justify-center p-2 cursor-pointer"
                                 target="_blank"
                                 aria-label="Maurya Soni on GitHub"
                             >
@@ -123,7 +121,7 @@ const Footer = () => {
                             <Link
                                 href={links.mail}
                                 aria-label="Email Maurya Soni"
-                                className="h-10 w-10 border border-grey hover:border-primary transition-all ease-in-out duration-300 rounded-full inline-flex items-center justify-center p-2 cursor-pointer"
+                                className="h-12 w-12 border border-grey hover:border-primary transition-all ease-in-out duration-300 rounded-full inline-flex items-center justify-center p-2 cursor-pointer"
                             >
                                 <Image
                                     height={18}
@@ -135,7 +133,7 @@ const Footer = () => {
                             </Link>
                             <Link
                                 href={links.instagram}
-                                className="h-10 w-10 border border-grey hover:border-primary transition-all ease-in-out duration-300 rounded-full inline-flex items-center justify-center p-2 cursor-pointer"
+                                className="h-12 w-12 border border-grey hover:border-primary transition-all ease-in-out duration-300 rounded-full inline-flex items-center justify-center p-2 cursor-pointer"
                                 target="_blank"
                                 aria-label="Maurya Soni on Instagram"
                             >
@@ -149,7 +147,7 @@ const Footer = () => {
                             </Link>
                             <Link
                                 href={links.credly}
-                                className="h-10 w-10 border border-grey hover:border-primary transition-all ease-in-out duration-300 rounded-full inline-flex items-center justify-center p-2 cursor-pointer"
+                                className="h-12 w-12 border border-grey hover:border-primary transition-all ease-in-out duration-300 rounded-full inline-flex items-center justify-center p-2 cursor-pointer"
                                 target="_blank"
                                 aria-label="Maurya Soni on Credly"
                             >

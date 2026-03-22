@@ -1,5 +1,6 @@
 import CommonHead from 'components/components/CommonHead/CommonHead';
 import StatusSection from 'components/components/StatusSection/StatusSection';
+import Head from 'next/head';
 
 const NotFound = () => {
     const meta404 = {
@@ -11,12 +12,15 @@ const NotFound = () => {
             title: '404 - Page Not Found',
             description:
                 "Oops! The page you're looking for cannot be found. Visit our homepage to continue browsing.",
-            image: '/images/maurya-main-image.jpg',
+            image: '/images/maurya-image-one.jpg',
         },
     };
 
     return (
         <>
+            <Head>
+                <meta name="robots" content="noindex, nofollow" />
+            </Head>
             <CommonHead metaData={meta404} />
             <StatusSection
                 title="404"

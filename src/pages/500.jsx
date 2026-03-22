@@ -1,5 +1,6 @@
 import CommonHead from 'components/components/CommonHead/CommonHead';
 import StatusSection from 'components/components/StatusSection/StatusSection';
+import Head from 'next/head';
 
 const SomethingWentWrongPage = () => {
     const meta500 = {
@@ -11,12 +12,15 @@ const SomethingWentWrongPage = () => {
             title: '500 - Internal Server Error',
             description:
                 'An unexpected error occurred on the server. We are working to fix it as soon as possible.',
-            image: '/images/maurya-main-image.jpg',
+            image: '/images/maurya-image-one.jpg',
         },
     };
 
     return (
         <>
+            <Head>
+                <meta name="robots" content="noindex, nofollow" />
+            </Head>
             <CommonHead metaData={meta500} />
             <StatusSection
                 title="500"

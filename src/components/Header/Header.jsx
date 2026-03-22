@@ -21,8 +21,10 @@ const Header = () => {
             setActiveSection('banner');
         }
     }, [pathname]);
-    const scrollToSection = (sectionId) => {
-        const scrollAction = () => {
+
+    const scrollToSection = (e, sectionId) => {
+        if (router.pathname === '/') {
+            e.preventDefault();
             const element = document.getElementById(sectionId);
             if (element) {
                 const yOffset = -68;
@@ -30,16 +32,8 @@ const Header = () => {
                     element.getBoundingClientRect().top +
                     window.pageYOffset +
                     yOffset;
-
                 window.scrollTo({ top: y, behavior: 'smooth' });
             }
-        };
-        if (router.pathname !== '/') {
-            router.push('/').then(() => {
-                setTimeout(scrollAction, 400);
-            });
-        } else {
-            scrollAction();
         }
         setMobileOpen(false);
     };
@@ -72,6 +66,13 @@ const Header = () => {
         return () => window.removeEventListener('scroll', handleScroll);
     }, [pathname]);
 
+    const navLinkClass = (section) =>
+        `text-xl font-medium transition ${
+            activeSection === section
+                ? 'text-primary'
+                : 'text-grey hover:text-primary'
+        }`;
+
     return (
         <div className="relative z-20 h-[68px]">
             <header className="bg-black py-4 fixed w-full shadow-[0_4px_10px_rgb(149_149_149_/_0.08)]">
@@ -79,116 +80,113 @@ const Header = () => {
                     <div className="flex justify-between items-center">
                         <Link
                             href="/"
-                            className="text-primary font-bold text-3xl"
+                            className="text-primary font-bold text-3xl min-h-[48px] flex items-center"
                         >
                             MS
                         </Link>
 
-                        {/* Mobile Menu */}
                         <div className="flex items-center gap-4 md:gap-8">
-                        <button
-                            onClick={() => setMobileOpen(true)}
-                            className="md:hidden text-grey"
-                            aria-label="Open menu"
-                        >
-                            <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                width="24"
-                                height="24"
-                                viewBox="0 0 24 24"
-                                fill="none"
+                            {/* Hamburger */}
+                            <button
+                                onClick={() => setMobileOpen(true)}
+                                className="md:hidden text-grey min-h-[48px] min-w-[48px] flex items-center justify-center"
+                                aria-label="Open menu"
                             >
-                                <g clipPath="url(#clip0_431_73)">
-                                    <path
-                                        d="M4 6H20"
-                                        stroke="#959595"
-                                        strokeWidth="2"
-                                        strokeLinecap="round"
-                                        strokeLinejoin="round"
-                                    />
-                                    <path
-                                        d="M4 12H20"
-                                        stroke="#959595"
-                                        strokeWidth="2"
-                                        strokeLinecap="round"
-                                        strokeLinejoin="round"
-                                    />
-                                    <path
-                                        d="M4 18H20"
-                                        stroke="#959595"
-                                        strokeWidth="2"
-                                        strokeLinecap="round"
-                                        strokeLinejoin="round"
-                                    />
-                                </g>
-                                <defs>
-                                    <clipPath id="clip0_431_73">
-                                        <rect
-                                            width="24"
-                                            height="24"
-                                            fill="white"
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    width="24"
+                                    height="24"
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                >
+                                    <g clipPath="url(#clip0_431_73)">
+                                        <path
+                                            d="M4 6H20"
+                                            stroke="#959595"
+                                            strokeWidth="2"
+                                            strokeLinecap="round"
+                                            strokeLinejoin="round"
                                         />
-                                    </clipPath>
-                                </defs>
-                            </svg>
-                        </button>
-                        <nav className="hidden md:block">
-                            <ul className="flex gap-14 items-center">
-                                <li>
-                                    <button
-                                        onClick={() =>
-                                            scrollToSection('banner')
-                                        }
-                                        className={`text-xl font-medium transition ${
-                                            activeSection === 'banner'
-                                                ? 'text-primary'
-                                                : 'text-grey hover:text-primary'
-                                        }`}
-                                    >
-                                        Home
-                                    </button>
-                                </li>
-                                <li>
-                                    <button
-                                        onClick={() => scrollToSection('about')}
-                                        className={`text-xl font-medium transition ${
-                                            activeSection === 'about'
-                                                ? 'text-primary'
-                                                : 'text-grey hover:text-primary'
-                                        }`}
-                                    >
-                                        About
-                                    </button>
-                                </li>
-                                <li>
-                                    <button
-                                        onClick={() =>
-                                            scrollToSection('projects')
-                                        }
-                                        className={`text-xl font-medium transition ${
-                                            activeSection === 'projects'
-                                                ? 'text-primary'
-                                                : 'text-grey hover:text-primary'
-                                        }`}
-                                    >
-                                        Projects
-                                    </button>
-                                </li>
-                                <li>
-                                    <Link
-                                        href="/contact-me"
-                                        className={`text-xl font-medium transition ${
-                                            pathname === '/contact-me'
-                                                ? 'text-primary'
-                                                : 'text-grey hover:text-primary'
-                                        }`}
-                                    >
-                                        Contact
-                                    </Link>
-                                </li>
-                            </ul>
-                        </nav>
+                                        <path
+                                            d="M4 12H20"
+                                            stroke="#959595"
+                                            strokeWidth="2"
+                                            strokeLinecap="round"
+                                            strokeLinejoin="round"
+                                        />
+                                        <path
+                                            d="M4 18H20"
+                                            stroke="#959595"
+                                            strokeWidth="2"
+                                            strokeLinecap="round"
+                                            strokeLinejoin="round"
+                                        />
+                                    </g>
+                                    <defs>
+                                        <clipPath id="clip0_431_73">
+                                            <rect
+                                                width="24"
+                                                height="24"
+                                                fill="white"
+                                            />
+                                        </clipPath>
+                                    </defs>
+                                </svg>
+                            </button>
+
+                            {/* Desktop nav */}
+                            <nav className="hidden md:block">
+                                <ul className="flex gap-14 items-center">
+                                    <li>
+                                        <a
+                                            href="/#banner"
+                                            onClick={(e) =>
+                                                scrollToSection(e, 'banner')
+                                            }
+                                            className={navLinkClass('banner')}
+                                        >
+                                            Home
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a
+                                            href="/#about"
+                                            onClick={(e) =>
+                                                scrollToSection(e, 'about')
+                                            }
+                                            className={navLinkClass('about')}
+                                        >
+                                            About
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a
+                                            href="/#projects"
+                                            onClick={(e) =>
+                                                scrollToSection(e, 'projects')
+                                            }
+                                            className={navLinkClass('projects')}
+                                        >
+                                            Projects
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <Link
+                                            href="/contact-me"
+                                            className={`text-xl font-medium transition ${
+                                                pathname === '/contact-me'
+                                                    ? 'text-primary'
+                                                    : 'text-grey hover:text-primary'
+                                            }`}
+                                        >
+                                            Contact
+                                        </Link>
+                                    </li>
+                                </ul>
+                            </nav>
                         </div>
+
+                        {/* Mobile menu */}
                         {mobileOpen && (
                             <div
                                 ref={menuRef}
@@ -198,6 +196,7 @@ const Header = () => {
                                     <button
                                         onClick={() => setMobileOpen(false)}
                                         aria-label="Close menu"
+                                        className="min-h-[48px] min-w-[48px] flex items-center justify-center"
                                     >
                                         <svg
                                             xmlns="http://www.w3.org/2000/svg"
@@ -238,46 +237,46 @@ const Header = () => {
                                 <nav>
                                     <ul className="flex flex-col gap-y-6">
                                         <li>
-                                            <button
-                                                onClick={() =>
-                                                    scrollToSection('banner')
+                                            <a
+                                                href="/#banner"
+                                                onClick={(e) =>
+                                                    scrollToSection(e, 'banner')
                                                 }
-                                                className={`text-xl font-medium transition ${
-                                                    activeSection === 'banner'
-                                                        ? 'text-primary'
-                                                        : 'text-grey hover:text-primary'
-                                                }`}
+                                                className={navLinkClass(
+                                                    'banner',
+                                                )}
                                             >
                                                 Home
-                                            </button>
+                                            </a>
                                         </li>
                                         <li>
-                                            <button
-                                                onClick={() =>
-                                                    scrollToSection('about')
+                                            <a
+                                                href="/#about"
+                                                onClick={(e) =>
+                                                    scrollToSection(e, 'about')
                                                 }
-                                                className={`text-xl font-medium transition ${
-                                                    activeSection === 'about'
-                                                        ? 'text-primary'
-                                                        : 'text-grey hover:text-primary'
-                                                }`}
+                                                className={navLinkClass(
+                                                    'about',
+                                                )}
                                             >
                                                 About
-                                            </button>
+                                            </a>
                                         </li>
                                         <li>
-                                            <button
-                                                onClick={() =>
-                                                    scrollToSection('projects')
+                                            <a
+                                                href="/#projects"
+                                                onClick={(e) =>
+                                                    scrollToSection(
+                                                        e,
+                                                        'projects',
+                                                    )
                                                 }
-                                                className={`text-xl font-medium transition ${
-                                                    activeSection === 'projects'
-                                                        ? 'text-primary'
-                                                        : 'text-grey hover:text-primary'
-                                                }`}
+                                                className={navLinkClass(
+                                                    'projects',
+                                                )}
                                             >
                                                 Projects
-                                            </button>
+                                            </a>
                                         </li>
                                         <li>
                                             <Link
