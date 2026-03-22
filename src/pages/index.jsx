@@ -7,16 +7,16 @@ import CommonHead from 'components/components/CommonHead/CommonHead';
 
 export default function HomePage() {
     const metaHome = {
-        title: 'Frontend Developer | Maurya Soni',
+        title: 'Maurya Soni | Frontend Developer',
         description:
             'I am a Frontend Developer specializing in building responsive, user-friendly, and modern web interfaces using React, JavaScript, and UI best practices.',
         keywords:
             'Frontend Developer, React Developer, Web Developer, UI Developer, JavaScript Developer, Portfolio, Maurya Soni',
         og: {
-            title: 'Frontend Developer | Maurya Soni',
+            title: 'Maurya Soni | Frontend Developer',
             description:
                 'Explore the portfolio of Maurya Soni, a Frontend Developer crafting modern and high-performance user interfaces.',
-            image: '/images/maurya-main-image.jpg',
+            image: '/images/maurya-image-one.jpg',
         },
     };
     return (

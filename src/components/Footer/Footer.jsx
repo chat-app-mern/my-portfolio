@@ -96,26 +96,40 @@ const Footer = () => {
                                 href={links.linkedin}
                                 className="h-10 w-10 border border-grey hover:border-primary transition-all ease-in-out duration-300 rounded-full inline-flex items-center justify-center p-2 cursor-pointer"
                                 target="_blank"
-                                aria-label="LinkedIn profile"
+                                aria-label="Maurya Soni on LinkedIn"
                             >
                                 <Image
                                     height={18}
                                     width={18}
                                     src={'/images/linkedin.svg'}
-                                    alt="social-link"
+                                    alt="Maurya Soni on LinkedIn"
+                                    className="w-full h-full object-contain"
+                                />
+                            </Link>
+                            <Link
+                                href={links.github}
+                                className="h-10 w-10 border border-grey hover:border-primary transition-all ease-in-out duration-300 rounded-full inline-flex items-center justify-center p-2 cursor-pointer"
+                                target="_blank"
+                                aria-label="Maurya Soni on GitHub"
+                            >
+                                <Image
+                                    height={18}
+                                    width={18}
+                                    src={'/images/github.svg'}
+                                    alt="Maurya Soni on GitHub"
                                     className="w-full h-full object-contain"
                                 />
                             </Link>
                             <Link
                                 href={links.mail}
-                                aria-label="Email contact"
+                                aria-label="Email Maurya Soni"
                                 className="h-10 w-10 border border-grey hover:border-primary transition-all ease-in-out duration-300 rounded-full inline-flex items-center justify-center p-2 cursor-pointer"
                             >
                                 <Image
                                     height={18}
                                     width={18}
                                     src={'/images/mail.svg'}
-                                    alt="social-link"
+                                    alt="Email Maurya Soni"
                                     className="w-full h-full object-contain"
                                 />
                             </Link>
@@ -123,13 +137,13 @@ const Footer = () => {
                                 href={links.instagram}
                                 className="h-10 w-10 border border-grey hover:border-primary transition-all ease-in-out duration-300 rounded-full inline-flex items-center justify-center p-2 cursor-pointer"
                                 target="_blank"
-                                aria-label="Instagram profile"
+                                aria-label="Maurya Soni on Instagram"
                             >
                                 <Image
                                     height={18}
                                     width={18}
                                     src={'/images/instagram.svg'}
-                                    alt="social-link"
+                                    alt="Maurya Soni on Instagram"
                                     className="w-full h-full object-contain"
                                 />
                             </Link>
@@ -137,13 +151,13 @@ const Footer = () => {
                                 href={links.credly}
                                 className="h-10 w-10 border border-grey hover:border-primary transition-all ease-in-out duration-300 rounded-full inline-flex items-center justify-center p-2 cursor-pointer"
                                 target="_blank"
-                                aria-label="Credly profile"
+                                aria-label="Maurya Soni on Credly"
                             >
                                 <Image
                                     height={18}
                                     width={18}
                                     src={'/images/credly.svg'}
-                                    alt="social-link"
+                                    alt="Maurya Soni on Credly"
                                     className="w-full h-full object-contain"
                                 />
                             </Link>

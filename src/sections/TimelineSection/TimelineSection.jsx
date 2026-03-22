@@ -13,7 +13,7 @@ const TimelineSection = () => {
         {
             id: 1,
             title: 'Krishaweb',
-            description: `Frontend Developer (${experience} years)`,
+            description: `Frontend Developer (${experience} years) — May 2024 – Present, Ahmedabad, India. Building responsive web interfaces with React and Next.js. Collaborating with design and backend teams to ship production-ready features, optimize performance, and deliver high-quality user experiences across multiple client projects.`,
             url: 'https://www.krishaweb.com'
         },
         {

@@ -16,19 +16,27 @@ const ProjectCard = ({ project }) => {
                 <div className="pb-[100%] relative">
                     <Image
                         fill
+                        sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
                         src={project.image}
                         className="object-cover rounded-t-xl bg-primary object-center"
                         alt={project.title}
                     />
                 </div>
 
-                <div className="flex justify-between items-center gap-2.5 p-4 bg-lightBlack rounded-b-xl h-full">
-                    <h3 className="text-grey font-bold text-base group-hover:text-primary transition ease-in-out duration-300">
-                        {project.title}
-                    </h3>
-                    <h4 className="text-darkGrey font-bold text-base">
-                        {project.tech}
-                    </h4>
+                <div className="flex flex-col gap-2 p-4 bg-lightBlack rounded-b-xl h-full">
+                    <div className="flex justify-between items-center gap-2.5">
+                        <h3 className="text-grey font-bold text-base group-hover:text-primary transition ease-in-out duration-300">
+                            {project.title}
+                        </h3>
+                        <span className="text-darkGrey font-bold text-base">
+                            {project.tech}
+                        </span>
+                    </div>
+                    {project.description && (
+                        <p className="text-darkGrey text-sm leading-relaxed">
+                            {project.description}
+                        </p>
+                    )}
                 </div>
             </Link>
         </div>

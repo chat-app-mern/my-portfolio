@@ -1,0 +1,26 @@
+# Maurya Soni
+> Frontend Developer with 1+ years experience. Specializes in React, Next.js, Tailwind CSS. Employed at Krishaweb. B.Tech IT, Charusat University 2024. Based in Ahmedabad, India.
+
+## Skills
+HTML, CSS, SCSS, Tailwind CSS, ReactJS, Next.js, JavaScript, Node.js, MongoDB, Sequelize
+
+## Work Experience
+- Frontend Developer at Krishaweb (May 2024 – Present), Ahmedabad, India. Builds responsive, high-performance web interfaces using React and Next.js. Works across the full frontend lifecycle from design handoff to production deployment.
+
+## Education
+- B.Tech Information Technology, Charusat University (2020 – 2024)
+- HSC, Nirman High School, Vastrapur (2018 – 2020)
+- SSC, St. Kabir School, Drive-In (2006 – 2018)
+
+## Projects
+- Freshly: A recipe discovery app built with Next.js. Users can browse, search, and save recipes with a clean, responsive UI. Focused on SSG for performance and SEO.
+- Leave App: A leave management system built on the MERN Stack. Allows employees to apply for leave and managers to approve or reject requests with role-based access control.
+- FoodMart: A food delivery platform built on the MERN Stack. Includes product listings, cart management, and order flow for an end-to-end ordering experience.
+
+## Contact
+Email: mauryasoni71@gmail.com
+LinkedIn: https://www.linkedin.com/in/mauryasoni
+Instagram: https://www.instagram.com/_mauryasoni_
+Credly: https://www.credly.com/users/mauryasoni/badges
+GitHub: https://github.com/maurya22010
+Portfolio: https://portfolio-maurya-soni.vercel.app/

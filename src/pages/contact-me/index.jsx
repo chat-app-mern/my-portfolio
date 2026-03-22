@@ -5,21 +5,22 @@ import ReCaptchaProviderWrapper from 'components/wrappers/RecaptchaWrapper/Recap
 
 const ContactMePage = () => {
     const metaContact = {
-        title: 'Contact Us | Maurya Soni',
+        title: 'Contact Maurya Soni | Frontend Developer',
         description:
-            "Get in touch with us for inquiries, support, or collaboration opportunities. We'd love to hear from you.",
-        keywords: 'contact us, support, inquiries, get in touch',
+            'Get in touch with Maurya Soni for collaboration, freelance inquiries, or any questions about frontend development projects.',
+        keywords:
+            'contact Maurya Soni, hire frontend developer, collaboration, get in touch',
         og: {
-            title: 'Contact Us',
+            title: 'Contact Maurya Soni | Frontend Developer',
             description:
-                'Have questions or need support? Reach out through our contact form.',
-            image: '/images/maurya-main-image.jpg',
+                'Reach out to Maurya Soni, Frontend Developer based in Ahmedabad, for collaboration or project inquiries.',
+            image: '/images/maurya-image-one.jpg',
         },
     };
 
     return (
         <>
-            <CommonHead metaData={metaContact} />
+            <CommonHead metaData={metaContact} pageType="ContactPage" />
             <ReCaptchaProviderWrapper>
                 <CommonSectionWrapper
                     title={'Contact Me'}

@@ -40,13 +40,21 @@ const AboutSection = () => {
                     <div>
                         <p className="text-grey text-lg md:text-xl font-semibold pb-5 text-center md:text-left">
                             A Frontend Developer with {experience} years of
-                            experience, skilled in creating clean, responsive,
-                            and user-friendly web interfaces. I work confidently
-                            with HTML, CSS, SCSS, Tailwind, React, and Next.js
-                            to build modern and smooth frontends. With hands-on
-                            knowledge of Node.js, MongoDB, and Sequelize, I
-                            understand full-stack workflows and build features
-                            that connect perfectly from UI to backend.
+                            experience, based in Ahmedabad, India. I specialize
+                            in creating clean, responsive, and user-friendly web
+                            interfaces. Currently working at Krishaweb, I build
+                            modern frontends using HTML, CSS, SCSS, Tailwind
+                            CSS, React, and Next.js — delivering fast, accessible
+                            web experiences across multiple client projects.
+                        </p>
+                        <p className="text-grey text-lg md:text-xl font-semibold pb-5 text-center md:text-left">
+                            With hands-on knowledge of Node.js, MongoDB, and
+                            Sequelize, I understand full-stack workflows and
+                            collaborate effectively with backend teams to ship
+                            complete, production-ready features. I hold a B.Tech
+                            in Information Technology from Charusat University
+                            (2024) and am continuously expanding my skill set
+                            through real-world projects and certifications.
                         </p>
                     </div>
                 </div>
