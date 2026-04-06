@@ -24,7 +24,7 @@ const AboutSection = () => {
                     <div className="">
                         <div className="pb-[85%] relative">
                             <Image
-                                src={'/images/maurya-image-two.jpg'}
+                                src={'/images/red-shirt.webp'}
                                 alt="main-image"
                                 className="object-cover object-center rounded-lg bg-primary"
                                 fill
@@ -44,8 +44,9 @@ const AboutSection = () => {
                             in creating clean, responsive, and user-friendly web
                             interfaces. Currently working at Krishaweb, I build
                             modern frontends using HTML, CSS, SCSS, Tailwind
-                            CSS, React, and Next.js — delivering fast, accessible
-                            web experiences across multiple client projects.
+                            CSS, React, and Next.js — delivering fast,
+                            accessible web experiences across multiple client
+                            projects.
                         </p>
                         <p className="text-grey text-lg md:text-xl font-semibold pb-5 text-center md:text-left">
                             With hands-on knowledge of Node.js, MongoDB, and
