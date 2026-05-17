@@ -16,7 +16,7 @@ export default function HomePage() {
             title: 'Maurya Soni | Frontend Developer',
             description:
                 'Explore the portfolio of Maurya Soni, a Frontend Developer crafting modern and high-performance user interfaces.',
-            image: '/images/maurya-image-one.jpg',
+            image: '/images/hero-image.jpg',
         },
     };
     return (

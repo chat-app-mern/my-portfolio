@@ -11,7 +11,7 @@ const AboutSection = () => {
     }, []);
     return (
         <CommonSectionWrapper
-            description="Frontend Development — creating clean and interactive web experiences."
+            description="Crafting intuitive and high-performance web experiences."
             title={'About Me'}
             sectionId="about"
         >
@@ -22,11 +22,11 @@ const AboutSection = () => {
                     data-aos-delay="400"
                 >
                     <div className="">
-                        <div className="pb-[85%] relative">
+                        <div className="pb-[70%] relative bg-white rounded-lg">
                             <Image
-                                src={'/images/red-shirt.webp'}
+                                src={'/images/about-image.png'}
                                 alt="main-image"
-                                className="object-cover object-center rounded-lg bg-primary"
+                                className="object-contain w-full max-w-[400px] mx-auto"
                                 fill
                             />
                         </div>
@@ -38,24 +38,11 @@ const AboutSection = () => {
                     data-aos-delay="400"
                 >
                     <div>
-                        <p className="text-grey text-lg md:text-xl font-semibold pb-5 text-center md:text-left">
-                            A Frontend Developer with {experience} years of
-                            experience, based in Ahmedabad, India. I specialize
-                            in creating clean, responsive, and user-friendly web
-                            interfaces. Currently working at Krishaweb, I build
-                            modern frontends using HTML, CSS, SCSS, Tailwind
-                            CSS, React, and Next.js — delivering fast,
-                            accessible web experiences across multiple client
-                            projects.
+                        <p className="text-grey text-lg md:text-xl font-medium pb-5 text-center md:text-left leading-relaxed">
+                            I'm a Frontend Developer based in Ahmedabad, India, with {experience} years of experience. At Krishaweb, I focus on building clean, responsive web interfaces using React, Next.js, and Tailwind CSS.
                         </p>
-                        <p className="text-grey text-lg md:text-xl font-semibold pb-5 text-center md:text-left">
-                            With hands-on knowledge of Node.js, MongoDB, and
-                            Sequelize, I understand full-stack workflows and
-                            collaborate effectively with backend teams to ship
-                            complete, production-ready features. I hold a B.Tech
-                            in Information Technology from Charusat University
-                            (2024) and am continuously expanding my skill set
-                            through real-world projects and certifications.
+                        <p className="text-grey text-lg md:text-xl font-medium pb-5 text-center md:text-left leading-relaxed">
+                            I also have a solid understanding of backend workflows with Node.js and MongoDB. I hold a B.Tech in IT from Charusat University (2024) and enjoy working closely with teams to ship high-quality products.
                         </p>
                     </div>
                 </div>
@@ -63,4 +50,5 @@ const AboutSection = () => {
         </CommonSectionWrapper>
     );
 };
+
 export default AboutSection;

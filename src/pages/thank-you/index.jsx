@@ -11,7 +11,7 @@ const ThankYouPage = () => {
         og: {
             title: 'Thank You | Maurya Soni',
             description: 'Your message has been received.',
-            image: '/images/maurya-image-one.jpg',
+            image: '/images/hero-image.jpg',
         },
     };
     return (

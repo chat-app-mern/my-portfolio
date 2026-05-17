@@ -13,25 +13,25 @@ const TimelineSection = () => {
         {
             id: 1,
             title: 'Krishaweb',
-            description: `Frontend Developer (${experience} years) — May 2024 – Present, Ahmedabad, India. Building responsive web interfaces with React and Next.js. Collaborating with design and backend teams to ship production-ready features, optimize performance, and deliver high-quality user experiences across multiple client projects.`,
+            description: `Frontend Developer (${experience} years) | May 2024 - Present. Developing scalable, responsive user interfaces using React and Next.js, and collaborating with cross-functional teams to ship production-ready applications.`,
             url: 'https://www.krishaweb.com'
         },
         {
             id: 2,
             title: 'Charusat University',
-            description: 'Btech-IT (2020 - 2024)',
+            description: 'B.Tech in Information Technology | 2020 - 2024',
             url: 'https://www.charusat.ac.in'
         },
         {
             id: 3,
             title: 'Nirman High School, Vastrapur',
-            description: 'HSC (2018 - 2020)',
+            description: 'Higher Secondary Certificate (HSC) | 2018 - 2020',
             url: 'https://nirmanhighschool.com'
         },
         {
             id: 4,
             title: 'St. Kabir School, Drive-In (Old)',
-            description: 'SSC (2006 - 2018)',
+            description: 'Secondary School Certificate (SSC) | 2006 - 2018',
             url: 'https://stkabir.com'
         },
     ];
@@ -39,7 +39,7 @@ const TimelineSection = () => {
     return (
         <CommonSectionWrapper
             title="My Journey"
-            description={`What I've Done Upto This Point.`}
+            description={`My educational background and professional experience so far.`}
             sectionId="timeline"
         >
             <div className="flex flex-wrap gap-y-10 xl:gap-y-20 flex-col relative">

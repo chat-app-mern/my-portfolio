@@ -39,7 +39,7 @@ const CommonHead = ({ metaData, pageType }) => {
             name: 'Maurya Soni',
             jobTitle: 'Frontend Developer',
             email: 'mailto:mauryasoni71@gmail.com',
-            image: `${BASE_URL}/images/maurya-image-one.jpg`,
+            image: `${BASE_URL}/images/hero-image.jpg`,
             worksFor: {
                 '@type': 'Organization',
                 name: 'Krishaweb',

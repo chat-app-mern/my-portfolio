@@ -12,7 +12,7 @@ const SomethingWentWrongPage = () => {
             title: '500 - Internal Server Error',
             description:
                 'An unexpected error occurred on the server. We are working to fix it as soon as possible.',
-            image: '/images/maurya-image-one.jpg',
+            image: '/images/hero-image.jpg',
         },
     };
 

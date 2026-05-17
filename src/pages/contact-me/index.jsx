@@ -14,7 +14,7 @@ const ContactMePage = () => {
             title: 'Contact Maurya Soni | Frontend Developer',
             description:
                 'Reach out to Maurya Soni, Frontend Developer based in Ahmedabad, for collaboration or project inquiries.',
-            image: '/images/maurya-image-one.jpg',
+            image: '/images/hero-image.jpg',
         },
     };
 
@@ -25,7 +25,7 @@ const ContactMePage = () => {
                 <CommonSectionWrapper
                     title={'Contact Me'}
                     description={
-                        'Cultivating Connections: Reach Out and Connect with Me'
+                        "Have a project in mind or just want to say hi? I'd love to hear from you."
                     }
                 >
                     <ContactForm />

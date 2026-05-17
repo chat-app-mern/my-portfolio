@@ -78,14 +78,7 @@ const Footer = () => {
                                             Contact
                                         </Link>
                                     </li>
-                                    <li>
-                                        <Link
-                                            className="text-xl font-medium text-grey transition-all duration-300 ease-in-out hover:text-primary"
-                                            href="/privacy-policy"
-                                        >
-                                            Privacy Policy
-                                        </Link>
-                                    </li>
+
                                 </ul>
                             </nav>
                         </div>
@@ -128,20 +121,6 @@ const Footer = () => {
                                     width={18}
                                     src={'/images/mail.svg'}
                                     alt="Email Maurya Soni"
-                                    className="w-full h-full object-contain"
-                                />
-                            </Link>
-                            <Link
-                                href={links.instagram}
-                                className="h-12 w-12 border border-grey hover:border-primary transition-all ease-in-out duration-300 rounded-full inline-flex items-center justify-center p-2 cursor-pointer"
-                                target="_blank"
-                                aria-label="Maurya Soni on Instagram"
-                            >
-                                <Image
-                                    height={18}
-                                    width={18}
-                                    src={'/images/instagram.svg'}
-                                    alt="Maurya Soni on Instagram"
                                     className="w-full h-full object-contain"
                                 />
                             </Link>

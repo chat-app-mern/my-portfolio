@@ -71,20 +71,6 @@ const BannerSection = () => {
                                         />
                                     </Link>
                                     <Link
-                                        href={links.instagram}
-                                        target="_blank"
-                                        aria-label="Maurya Soni on Instagram"
-                                        className="h-12 w-12 border border-grey hover:border-primary transition-all ease-in-out duration-300 rounded-full inline-flex items-center justify-center p-2 cursor-pointer"
-                                    >
-                                        <Image
-                                            height={18}
-                                            width={18}
-                                            src={'/images/instagram.svg'}
-                                            alt="Maurya Soni on Instagram"
-                                            className="w-full h-full object-contain"
-                                        />
-                                    </Link>
-                                    <Link
                                         href={links.credly}
                                         target="_blank"
                                         aria-label="Maurya Soni on Credly"
@@ -124,7 +110,7 @@ const BannerSection = () => {
                         <div className="lg:py-5">
                             <div className="pb-[85%] relative">
                                 <Image
-                                    src={'/images/maurya-image-two.jpg'}
+                                    src={'/images/hero-image.jpg'}
                                     alt="Maurya Soni — Frontend Developer"
                                     className="object-cover object-center rounded-lg bg-primary"
                                     fill

@@ -9,7 +9,7 @@ const ProjectsSection = () => {
             image: '/images/freshly-image.png',
             link: 'https://github.com/maurya22010/recipe-app',
             description:
-                'A recipe discovery app built with Next.js. Users can browse, search, and save recipes with a clean, responsive interface. Leverages static site generation for fast load times and strong SEO, with a focus on intuitive UI and smooth navigation across recipe categories.',
+                'A Next.js recipe discovery app featuring a clean, responsive UI. It utilizes static site generation for fast performance and SEO, allowing users to effortlessly browse, search, and save recipes.',
         },
         {
             title: 'Leave App',
@@ -17,7 +17,7 @@ const ProjectsSection = () => {
             image: '/images/leaveapp-image.png',
             link: 'https://github.com/maurya22010/leave-mgmt-frontend',
             description:
-                'A leave management system built on the MERN Stack. Employees can submit leave requests while managers review, approve, or reject them through a role-based dashboard. Built with React on the frontend and Node.js, Express, and MongoDB on the backend for full-stack data flow.',
+                'A role-based MERN stack application for leave management. It streamlines the process for employees to request time off and for managers to review and approve them through an intuitive dashboard.',
         },
         {
             title: 'FoodMart',
@@ -25,12 +25,16 @@ const ProjectsSection = () => {
             image: '/images/foodmart-image.png',
             link: 'https://github.com/maurya22010/foodmart-frontend',
             description:
-                'A food delivery platform built on the MERN Stack. Features product listings with category filtering, an add-to-cart system, and a checkout flow. The React frontend communicates with a Node.js/Express API backed by MongoDB, delivering a seamless end-to-end ordering experience.',
+                'A full-stack food delivery platform built with the MERN stack. It includes dynamic product listings, category filtering, and a complete shopping cart and checkout experience.',
         },
     ];
 
     return (
-        <CommonSectionWrapper title={'Projects'} sectionId={'projects'}>
+        <CommonSectionWrapper 
+            title={'Projects'} 
+            description={"Some of the recent projects I've built to explore new ideas and technologies."}
+            sectionId={'projects'}
+        >
             <div className="flex flex-wrap -mx-4 gap-y-6">
                 {projectsData.map((project, index) => (
                     <ProjectCard key={index} project={project} />
