@@ -1,26 +1,69 @@
 # Maurya Soni
-> Frontend Developer with 1+ years experience. Specializes in React, Next.js, Tailwind CSS. Employed at Krishaweb. B.Tech IT, Charusat University 2024. Based in Ahmedabad, India.
 
-## Skills
-HTML, CSS, SCSS, Tailwind CSS, ReactJS, Next.js, JavaScript, Node.js, MongoDB, Sequelize
+> Maurya Soni is a frontend developer based in Ahmedabad, India. He builds clean, responsive, and high-performance web interfaces with React, Next.js, Tailwind CSS, and JavaScript.
 
-## Work Experience
-- Frontend Developer at Krishaweb (May 2024 – Present), Ahmedabad, India. Builds responsive, high-performance web interfaces using React and Next.js. Works across the full frontend lifecycle from design handoff to production deployment.
+## Summary
+
+Maurya Soni is a frontend developer currently working at Krishaweb. He focuses on modern web application interfaces, performance-conscious frontend development, and smooth collaboration across the product lifecycle. He also has working knowledge of backend development with Node.js, MongoDB, and Sequelize.
+
+## Location
+
+Ahmedabad, India
+
+## Current Role
+
+- Frontend Developer at Krishaweb
+- Start date: May 2024
+- Focus: React, Next.js, responsive UI development, production-ready frontend implementation
+
+## Core Skills
+
+- HTML
+- CSS
+- SCSS
+- Tailwind CSS
+- JavaScript
+- React
+- Next.js
+- Node.js
+- MongoDB
+- Sequelize
 
 ## Education
-- B.Tech Information Technology, Charusat University (2020 – 2024)
-- HSC, Nirman High School, Vastrapur (2018 – 2020)
-- SSC, St. Kabir School, Drive-In (2006 – 2018)
 
-## Projects
-- Freshly: A recipe discovery app built with Next.js. Users can browse, search, and save recipes with a clean, responsive UI. Focused on SSG for performance and SEO.
-- Leave App: A leave management system built on the MERN Stack. Allows employees to apply for leave and managers to approve or reject requests with role-based access control.
-- FoodMart: A food delivery platform built on the MERN Stack. Includes product listings, cart management, and order flow for an end-to-end ordering experience.
+- B.Tech in Information Technology, Charusat University, 2020-2024
+- Higher Secondary Certificate (HSC), Nirman High School, Vastrapur, 2018-2020
+- Secondary School Certificate (SSC), St. Kabir School, Drive-In, 2006-2018
 
-## Contact
-Email: mauryasoni71@gmail.com
-LinkedIn: https://www.linkedin.com/in/mauryasoni
-Instagram: https://www.instagram.com/_mauryasoni_
-Credly: https://www.credly.com/users/mauryasoni/badges
-GitHub: https://github.com/maurya22010
-Portfolio: https://portfolio-maurya-soni.vercel.app/
+## Selected Projects
+
+### Freshly
+
+A recipe discovery application built with Next.js. It features a clean responsive interface, recipe browsing and search, saved items, and a performance-oriented setup using static site generation.
+
+Repository: https://github.com/maurya22010/recipe-app
+
+### Leave App
+
+A MERN stack leave management system with role-based workflows. Employees can submit leave requests and managers can review, approve, or reject them through a structured dashboard experience.
+
+Repository: https://github.com/maurya22010/leave-mgmt-frontend
+
+### FoodMart
+
+A MERN stack food delivery platform with product listings, category filtering, cart management, and checkout flow for an end-to-end ordering experience.
+
+Repository: https://github.com/maurya22010/foodmart-frontend
+
+## Profiles and Contact
+
+- Email: mauryasoni71@gmail.com
+- LinkedIn: https://www.linkedin.com/in/mauryasoni
+- GitHub: https://github.com/maurya22010
+- Credly: https://www.credly.com/users/mauryasoni/badges
+- Instagram: https://www.instagram.com/_mauryasoni_
+- Portfolio: https://portfolio-maurya-soni.vercel.app/
+
+## Usage Notes
+
+This file is intended to help language models, AI agents, and automated readers understand the portfolio owner, technical background, and major project work at a glance.
